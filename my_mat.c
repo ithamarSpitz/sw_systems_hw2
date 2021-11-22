@@ -7,6 +7,7 @@ void floydWarshall(int mat[10][10]) {
             for (j = 0; j < 10; j++) {
                 if (mat[i][k] + mat[k][j] <= mat[i][j])
                 matrix[i][j] = mat[i][k] + mat[k][j];
+                
       }
     }
   }
