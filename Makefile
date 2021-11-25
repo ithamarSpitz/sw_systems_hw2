@@ -1,12 +1,12 @@
-all: connection.so connections
+all: connections
 
-my_mat.o: may_mat.c my_mat.h
+my_mat.o: my_mat.c my_mat.h
 	gcc -Wall -g -c my_mat.c
 main.o: main.c my_mat.h
-	gcc -Wall -g -c main.c
+	gcc -Wall -g -c main.c 
 
 connection.so: my_mat.o 
-	gcc -shared -o connection.o
+	gcc -shared -o my_mat.o
 
 connections: main.o connections.so
 	-gcc -Wall -g -o connections main.o connection.so -lm

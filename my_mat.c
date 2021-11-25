@@ -14,7 +14,7 @@ void replace_zeros(int mat[10][10]){
 
 void floydWarshall(int mat[10][10]){
   int i, j, k;
-  replace_zeros(*mat);
+  replace_zeros(mat);
 
   for (k = 0; k < 10; k++) {
       for (i = 0; i < 10; i++) {
@@ -27,7 +27,7 @@ void floydWarshall(int mat[10][10]){
 }
 
 void ifRoute(int i, int j, int mat[10][10]){
-  if(mat[i][j]!=0 && mat[i][j]!=INF) pritf("True");
+  if(mat[i][j]!=0 && mat[i][j]!=INF) printf("True");
   else printf("Flase");
 }
 

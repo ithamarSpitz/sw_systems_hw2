@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "my_mat.h"
 
 void replace2zeros(int mat[10][10]){
   for (int i = 0; i < 10; i++){
@@ -8,7 +9,7 @@ void replace2zeros(int mat[10][10]){
   }
 }
 
-void main{
+int main{
     int a = 0;
     int b = 0;
     int c = 0;
@@ -21,14 +22,14 @@ void main{
     int source = -1;
 for (size_t i = 0; i < count; i++)
 {
-    char temp = str[i]
+    char temp = str[i];
     if(temp == 'D')
         break;
     if(temp == 'A'){
         a = 1;
         b = 0;
         c = 0;
-        replace2zeros(*mat)
+        replace2zeros(mat);
         continue;
     }
     if(temp == 'B'){
@@ -83,6 +84,4 @@ for (size_t i = 0; i < count; i++)
         }
     }
 }
-
-    
 }
