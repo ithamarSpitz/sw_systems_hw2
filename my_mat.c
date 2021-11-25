@@ -15,13 +15,9 @@ void floydWarshall(int mat[10][10]){
   replace_zeros(mat);
 
   for (k = 0; k < 10; k++) {
-    printf("%d", k);
       for (i = 0; i < 10; i++) {
-            printf("%d", i);
           for (j = 0; j < 10; j++) {
-                printf("%d", j);
               if (mat[i][k] + mat[k][j] < mat[i][j]){
-                printf("number changed");
                 mat[i][j] = mat[i][k] + mat[k][j];
               }
               }
@@ -30,11 +26,11 @@ void floydWarshall(int mat[10][10]){
 }
 
 void ifRoute(int i, int j, int mat[10][10]){
-  if(mat[i][j]!=0 && mat[i][j]!=INF) printf("True");
-  else printf("Flase");
+  if(mat[i][j]!=0 && mat[i][j]!=INF) printf("True\n");
+  else printf("Flase\n");
 }
 
 void printRoute(int i, int j, int mat[10][10]){
-  if(mat[i][j]!=0 && mat[i][j]!=INF) printf("%d", mat[i][j]);
-  else printf("%d", -1);
+  if(mat[i][j]!=0 && mat[i][j]!=INF) printf("%d\n", mat[i][j]);
+  else printf("%d\n", -1);
 }
