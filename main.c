@@ -9,7 +9,7 @@ void replace2zeros(int mat[10][10]){
   }
 }
 
-int main{
+int main(){
     int a = 0;
     int b = 0;
     int c = 0;
@@ -17,10 +17,10 @@ int main{
     int k = 0;
     int j = 0;
     char str[10000];
-    scanf(%s, str);
+    scanf("%s", str);
     int index = 0;
     int source = -1;
-for (size_t i = 0; i < count; i++)
+for (int i = 0; i < 1000; i++)
 {
     char temp = str[i];
     if(temp == 'D')
@@ -68,7 +68,7 @@ for (size_t i = 0; i < count; i++)
         if(source == -1){
             source = (temp - '0');
         }else{
-            ifRoute(source, (temp - '0'), *mat);
+            ifRoute(source, (temp - '0'), mat);
             source = -1;
         }
         }
@@ -79,7 +79,7 @@ for (size_t i = 0; i < count; i++)
         if(source == -1){
             source = (temp - '0');
         }else{
-            ifRoute(source, (temp - '0'), *mat);
+            printRoute(source, (temp - '0'), mat);
             source = -1;
         }
     }
