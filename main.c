@@ -33,15 +33,15 @@ for (int i = 0; i < 1000; i++)
         continue;
     }
     if(temp == 'B'){
-        a = 1;
-        b = 0;
+        a = 0;
+        b = 1;
         c = 0;
         continue;
     }
     if(temp == 'C'){
-        a = 1;
+        a = 0;
         b = 0;
-        c = 0;
+        c = 1;
         continue;
     }
     if(a){ 
@@ -79,7 +79,7 @@ for (int i = 0; i < 1000; i++)
         if(source == -1){
             source = (temp - '0');
         }else{
-            printRoute(source, (temp - '0'), mat);
+            ifRoute(source, (temp - '0'), mat);
             source = -1;
         }
     }
