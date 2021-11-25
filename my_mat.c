@@ -1,5 +1,8 @@
 #include <stdio.h>
-#define INF 10000000
+#define INF 100000000
+/*
+max int devided by 10 stands for infinity for taking the bigest number that still works with our algorithm
+*/
 
 void replace_zeros(int mat[10][10]){
   for (int i = 0; i < 10; i++){
