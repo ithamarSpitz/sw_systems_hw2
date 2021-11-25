@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>
-
 #define INF 10000000
 
 void replace_zeros(int mat[10][10]){
@@ -17,10 +15,15 @@ void floydWarshall(int mat[10][10]){
   replace_zeros(mat);
 
   for (k = 0; k < 10; k++) {
+    printf("%d", k);
       for (i = 0; i < 10; i++) {
+            printf("%d", i);
           for (j = 0; j < 10; j++) {
-              if (mat[i][k] + mat[k][j] <= mat[i][j])
+                printf("%d", j);
+              if (mat[i][k] + mat[k][j] < mat[i][j]){
+                printf("number changed");
                 mat[i][j] = mat[i][k] + mat[k][j];
+              }
               }
           }
       }
